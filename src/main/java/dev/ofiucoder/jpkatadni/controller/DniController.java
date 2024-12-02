@@ -19,8 +19,8 @@ public class DniController {
         while (true) {
             dniNumber = view.getDniInput();
             try {
-                char nifLetter = model.calculateVerifyLetter(dniNumber);
-                view.displayNVL(dniNumber, verifyLetter);
+                char verifyLetter = model.calculateVerifyLetter(dniNumber);
+                view.displayNumberVL(dniNumber, verifyLetter);
                 break;
             } catch (IllegalArgumentException e) {
                 view.displayError(e.getMessage());
